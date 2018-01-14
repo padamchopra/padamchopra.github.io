@@ -1,7 +1,0 @@
-# Site settings
-title: Padam Chopra's Blog
-description: A blog for sharing details regarding my projects
-keywords: Modern, Blogging, Fun
-author: Padam Chopra
-baseurl: "/blog/" # the subpath of your site, e.g. /blog/
-url: "http://padamchopra.github.io" # the base hostname & protocol for your site
