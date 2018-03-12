@@ -3,4 +3,4 @@ padamchopra.github.io  <br>
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/padamchopra)
 =========================
 
-View the webiste in action [here](https://padamchopra.github.io/)
+View the webiste [here](https://padamchopra.github.io/)
