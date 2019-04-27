@@ -33,7 +33,7 @@ table {
 .myname {
     width: 100%;
     text-align: center;
-    font-size: 50pt;
+    font-size: 60px;
     color: #333333;
     font-weight: 700;
 }
@@ -90,4 +90,45 @@ table {
 
 .fa-envelope:hover {
     background-color: #4285F4;
+}
+
+@media screen and (max-width: 1000px) {
+    .hideimage{
+        display: none;
+    }
+    .contenttd{
+        width: 100%;
+        background:linear-gradient(0deg,rgba(21,101,192,1),rgba(79,195,247,1));
+    }
+    .myname{
+        font-size: 180px;
+        line-height: 170px;
+        text-transform: uppercase;
+    }
+    .mypassion{
+        margin-top: 80px;
+        font-size: 44px;
+        width: 70%;
+        line-height: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        content: 'Hello';
+    }
+    .mypassion span{
+        display: none;
+    }
+    .mypassion:after{
+        content: 'Android Developer \A Web Developer \A Open-source enthusiast';
+        white-space: pre-wrap;
+        color: #FFFFFF;
+    }
+    .mysocials{
+        margin-top: 70px;
+    }
+    .socialicon{
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+        font-size: 40px;
+    }
 }
