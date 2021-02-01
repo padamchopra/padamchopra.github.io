@@ -1,46 +1,45 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    <title>Padam Chopra</title>
-    <link rel="icon" href="photos/hey.jpg" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    Fore more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="padamchopra">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>padamchopra</title>
+  <link rel="manifest" href="manifest.json">
 </head>
-
 <body>
-    <table width="100%" cellspacing="0" cellpadding="0">
-        <tr>
-            <td class="hideimage">
-                <div class="myimage">
-                    <div class="blueoverlay"></div>
-                </div>
-            </td>
-            <td class="contenttd">
-                <div class="myname">Padam Chopra</div>
-                <div class="mypassion">
-                    <span>BCS at University of Waterloo, Class of '24 <br> Interested in computer vision, ML, mobile,
-                        and backend.</span>
-                </div>
-                <div class="mysocials">
-                    <a href="http://padamchopra.me/resume.pdf" target="_blank"><i
-                            class="fas fa-file socialicon"></i></a>
-                    <a href="https://www.linkedin.com/in/padamchopra" target="_blank"><i
-                            class="fab fa-linkedin-in socialicon"></i></a>
-                    <a href="https://www.youtube.com/channel/UC-SlnBRXfvPWiEa3rlhPNsw" target="_blank"><i
-                            class="fab fa-youtube socialicon"></i></a>
-                    <a href="https://github.com/padamchopra" target="_blank"><i
-                            class="fab fa-github socialicon"></i></a>
-                    <a href="mailto:padam.chopra@uwaterloo.ca" target="_blank"><i
-                            class="fas fa-envelope socialicon"></i></a>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <script>
-
-    </script>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js?v=2993780227');
+      });
+    }
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
 </body>
-
 </html>
