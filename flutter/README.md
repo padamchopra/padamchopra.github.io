@@ -1,6 +1,6 @@
 # padamchopra
 
-A new Flutter project.
+Hi, I'm Padam. I'm currently pursuing a bachelor's in CS from the University of Waterloo. I specialize in Mobile Applications, NLP, Flutter and Vue. Get to know more about me here!
 
 ## Getting Started
 
