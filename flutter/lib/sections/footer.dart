@@ -39,7 +39,7 @@ class Footer extends StatelessWidget {
               IconButton(
                 icon: FaIcon(FontAwesomeIcons.twitter),
                 onPressed: () =>
-                    Data.launchUrl("https://twitter.com/PadamChopra3"),
+                    Data.launchUrl("https://twitter.com/PadamChopra_"),
               ),
               hSpace,
               IconButton(
