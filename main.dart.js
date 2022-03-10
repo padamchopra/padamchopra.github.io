@@ -47882,8 +47882,8 @@ G.Sj.prototype={
 $0:function(){return N.cH("mailto:padam.chopra@uwaterloo.ca")},
 $S:0}
 D.AD.prototype={
-M:function(a,b){var s,r,q=null,p="Ceridian Dayforce",o=t.w,n=b.O(o).f.a.a<960&&!0,m=T.cn(q,n?20:40,q),l=new D.SP(b),k=new D.SO(b),j=t.X
-l=T.cG(H.c([L.aZ("Work Experience",K.af(b).J.d.bD(C.l),q),M.aI(q,q,C.k,C.k1,q,q,q,5,q,q,q,q,120),m,l.$4$company$from$role$to(p,"January 2021","Developer Intern, Dayforce Assistant","April 2021"),m,l.$4$company$from$role$to(p,"May 2020","Android Developer Intern","August 2020"),m,T.fl(D.es(q,T.fy(H.c([L.aZ("See More",K.af(b).J.y,q),new L.oM(C.v9,12,q)],j),C.T,C.D,C.mi),C.U,!1,q,q,q,q,q,q,q,q,q,q,new D.SN(),q,q,q,q,q),C.b0,q,q,q,!0)],j),C.Z,C.D,C.w)
+M:function(a,b){var s,r,q=null,p="Ritual.co",o=t.w,n=b.O(o).f.a.a<960&&!0,m=T.cn(q,n?20:40,q),l=new D.SP(b),k=new D.SO(b),j=t.X
+l=T.cG(H.c([L.aZ("Work Experience",K.af(b).J.d.bD(C.l),q),M.aI(q,q,C.k,C.k1,q,q,q,5,q,q,q,q,120),m,l.$4$company$from$role$to("Ritual.co","September 2021","Software Engineering Intern","March 2022"),m,l.$4$company$from$role$to("Ceridian Dayforce","January 2021","NLP Developer Intern","April 2021"),m,T.fl(D.es(q,T.fy(H.c([L.aZ("See More",K.af(b).J.y,q),new L.oM(C.v9,12,q)],j),C.T,C.D,C.mi),C.U,!1,q,q,q,q,q,q,q,q,q,q,new D.SN(),q,q,q,q,q),C.b0,q,q,q,!0)],j),C.Z,C.D,C.w)
 s=n?T.cn(q,40,q):T.cn(q,q,180)
 r=H.c([l,s,T.cG(H.c([L.aZ("Education",K.af(b).J.d.bD(C.l),q),M.aI(q,q,C.k,C.k1,q,q,q,5,q,q,q,q,120),m,k.$5$dateRange$grade$institute$subject$type("September 2020 - Present","91%","University of Waterloo","Computer Science (co-op)","2A"),m,k.$5$dateRange$grade$institute$subject$type("Grad. 2019","98%","Amity International School","CBSE National Board","XII")],j),C.Z,C.D,C.w)],t.xi)
 o=b.O(o).f
