@@ -47874,7 +47874,7 @@ r=K.vc(1000)
 r=M.aI(m,U.Lh("images/me_smiling.png"),C.k,m,m,new S.da(s,m,m,r,m,m,C.a5),m,120,m,m,m,m,120)
 s=L.aZ("Hi, I'm Padam \ud83d\udc4b\ud83c\udffc",k?K.af(b).J.e.t9(22):K.af(b).J.e,m)
 q=L.aZ("Building solutions\nthrough code.",k?K.af(b).J.b.ta(C.l,28):K.af(b).J.b.bD(C.l),C.eL)
-p=k?L.aZ("Pursuing a Bachelor's in CS at the University of Waterloo \ud83c\udde8\ud83c\udde6. I specialize in Mobile Applications, Natural Language Processing, and Flutter. Also a top 0.1% John Mayer fan according to Spotify!",K.af(b).J.r.t9(16),C.eL):L.aZ("Pursuing a Bachelor's in CS at the University of Waterloo, Canada.\nI specialize in Mobile Applications, Natural Language Processing, and Flutter.\nAlso a top 0.1% John Mayer fan according to Spotify \ud83c\udfb8",K.af(b).J.r.t9(22),C.eL)
+p=k?L.aZ("Pursuing a Bachelor's in CS at the University of Waterloo \ud83c\udde8\ud83c\udde6. I specialize in Mobile Applications, Flutter, and Natural Language Processing. Also a top 0.1% John Mayer fan according to Spotify!",K.af(b).J.r.t9(16),C.eL):L.aZ("Pursuing a Bachelor's in CS at the University of Waterloo, Canada.\nI specialize in Mobile Applications, Flutter, and Natural Language Processing.\nAlso a top 0.1% John Mayer fan according to Spotify \ud83c\udfb8",K.af(b).J.r.t9(22),C.eL)
 o=$.a0f()
 n=K.vc(100)
 return M.aI(m,T.cG(H.c([r,j,s,j,q,j,p,j,T.fl(D.es(m,M.aI(m,L.aZ("CONNECT WITH ME",K.af(b).J.Q.bD(C.j),m),C.k,m,m,new S.da(o,m,m,n,m,m,C.a5),m,m,m,C.uQ,m,m,m),C.U,!1,m,m,m,m,m,m,m,m,m,m,new G.Sj(),m,m,m,m,m),C.b0,m,m,m,!0)],t.X),C.T,C.D,C.w),C.k,m,m,m,m,m,m,new V.at(40,40,40,40),m,m,l.a.a)}}
@@ -47882,10 +47882,10 @@ G.Sj.prototype={
 $0:function(){return N.cH("mailto:padam.chopra@uwaterloo.ca")},
 $S:0}
 D.AD.prototype={
-M:function(a,b){var s,r,q=null,p="Ritual.co",o=t.w,n=b.O(o).f.a.a<960&&!0,m=T.cn(q,n?20:40,q),l=new D.SP(b),k=new D.SO(b),j=t.X
-l=T.cG(H.c([L.aZ("Work Experience",K.af(b).J.d.bD(C.l),q),M.aI(q,q,C.k,C.k1,q,q,q,5,q,q,q,q,120),m,l.$4$company$from$role$to("Ritual.co","September 2021","Software Engineering Intern","March 2022"),m,l.$4$company$from$role$to("Ceridian Dayforce","January 2021","NLP Developer Intern","April 2021"),m,T.fl(D.es(q,T.fy(H.c([L.aZ("See More",K.af(b).J.y,q),new L.oM(C.v9,12,q)],j),C.T,C.D,C.mi),C.U,!1,q,q,q,q,q,q,q,q,q,q,new D.SN(),q,q,q,q,q),C.b0,q,q,q,!0)],j),C.Z,C.D,C.w)
+M:function(a,b){var s,r,q=null,p="1Password",o=t.w,n=b.O(o).f.a.a<960&&!0,m=T.cn(q,n?20:40,q),l=new D.SP(b),k=new D.SO(b),j=t.X
+l=T.cG(H.c([L.aZ("Work Experience",K.af(b).J.d.bD(C.l),q),M.aI(q,q,C.k,C.k1,q,q,q,5,q,q,q,q,120),m,l.$4$company$from$role$to("1Password","May 2022","Software Engineering Intern","August 2022"),m,l.$4$company$from$role$to("Ritual.co","September 2021","Software Engineering Intern","March 2022"),m,T.fl(D.es(q,T.fy(H.c([L.aZ("See More",K.af(b).J.y,q),new L.oM(C.v9,12,q)],j),C.T,C.D,C.mi),C.U,!1,q,q,q,q,q,q,q,q,q,q,new D.SN(),q,q,q,q,q),C.b0,q,q,q,!0)],j),C.Z,C.D,C.w)
 s=n?T.cn(q,40,q):T.cn(q,q,180)
-r=H.c([l,s,T.cG(H.c([L.aZ("Education",K.af(b).J.d.bD(C.l),q),M.aI(q,q,C.k,C.k1,q,q,q,5,q,q,q,q,120),m,k.$5$dateRange$grade$institute$subject$type("September 2020 - Present","91%","University of Waterloo","Computer Science (co-op)","2A"),m,k.$5$dateRange$grade$institute$subject$type("Grad. 2019","98%","Amity International School","CBSE National Board","XII")],j),C.Z,C.D,C.w)],t.xi)
+r=H.c([l,s,T.cG(H.c([L.aZ("Education",K.af(b).J.d.bD(C.l),q),M.aI(q,q,C.k,C.k1,q,q,q,5,q,q,q,q,120),m,k.$5$dateRange$grade$institute$subject$type("September 2019 - Present","91%","University of Waterloo","Computer Science","4A"),m,k.$5$dateRange$grade$institute$subject$type("Grad. 2019","98%","Amity International School","CBSE National Board","XII")],j),C.Z,C.D,C.w)],t.xi)
 o=b.O(o).f
 l=n?T.cG(r,C.T,C.D,C.w):T.fy(r,C.Z,C.hS,C.w)
 return M.aI(q,l,C.k,q,q,q,q,q,q,new V.at(40,40,40,40),q,q,o.a.a)}}
