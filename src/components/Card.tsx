@@ -34,6 +34,8 @@ export default function Card(props: CardProps) {
     let card_classes = classNames(
         {'p-4': props.apply_default_padding ?? true},
         props.parent_classes,
+        // {'sm:max-h-[10rem]': card_height == CardHeight.Default},
+        // {'sm:max-h-[20rem]': card_height == CardHeight.Two},
         'flex items-stretch rounded-xl border shadow-none hover:shadow transition-all overflow-hidden',
         card_height,
         {[card_size]: card_size != CardSize.Large},
