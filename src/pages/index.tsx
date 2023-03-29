@@ -9,12 +9,14 @@ import WorkExperienceCard from '@/components/cards/WorkExperience'
 import React from 'react'
 import TILCard, { TILCardProps } from '@/components/cards/TIL'
 import ShowcaseCard, { ShowcaseCardProps } from '@/components/cards/Showcase'
+import SongOfYearCard, { SongOfYearProps } from '@/components/cards/SongOfYear'
 
 const switzer = localFont({src: './fonts/switzer.ttf'})
 
 type HomeProps = {
   til_card_props: TILCardProps,
   showcase_card_props: ShowcaseCardProps,
+  song_of_year_props: SongOfYearProps,
 }
 
 export default function Home() {
@@ -23,6 +25,9 @@ export default function Home() {
     showcase_card_props: {
       url: 'https://firebasestorage.googleapis.com/v0/b/padamchopra-me.appspot.com/o/IMG_1389.jpeg?alt=media&token=cc152eee-5746-435a-9fc3-a3c230ef85d6',
       caption: 'Art Gallery Ontario'
+    },
+    song_of_year_props: {
+      link: 'https://open.spotify.com/embed/track/2t0wwvR15fc3K1ey8OiOaN?utm_source=generator&theme=0'
     }
   }
   const cards = [
@@ -36,6 +41,7 @@ export default function Home() {
     WorkExperienceCard,
     TILCard(props.til_card_props),
     ShowcaseCard(props.showcase_card_props),
+    SongOfYearCard(props.song_of_year_props)
   ]
 
   let key = 0;
@@ -82,7 +88,10 @@ export default function Home() {
 //   //     showcase_card_props: {
 //   //       url: fields["showcase_url"]["stringValue"],
 //   //       caption: fields["showcase_caption"]["stringValue"],
-//   //     }
+//   //     },
+//   //     song_of_year_props: {
+//   //       link: fields["song_of_year"]["stringValue"],
+//   //     },
 //   //   }
 //   //   console.log(home_props)
 //   // } catch (err) {
@@ -96,7 +105,10 @@ export default function Home() {
 //   //     showcase_card_props: {
 //   //       url: "",
 //   //       caption: error_fetching,
-//   //     }
+//   //     },
+//   //     song_of_year_props: {
+//   //       link: "https://open.spotify.com/embed/track/2t0wwvR15fc3K1ey8OiOaN?utm_source=generator&theme=0",
+//   //     },
 //   //   }
 //   // }
 

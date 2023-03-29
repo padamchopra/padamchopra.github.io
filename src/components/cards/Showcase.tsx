@@ -6,6 +6,36 @@ export type ShowcaseCardProps = {
     caption: string,
 }
 
+type WindowSize ={
+    width: number | undefined,
+    height: number | undefined,
+}
+
+function useWindowSize() {
+    // Initialize state with undefined width/height so server and client renders match
+    const [windowSize, setWindowSize] = useState<WindowSize>({
+      width: undefined,
+      height: undefined,
+    });
+    useEffect(() => {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount
+    return windowSize;
+  }
+
 const ShowcaseCard = (props: ShowcaseCardProps): CardProps => {
     return {
         apply_default_padding: false,
@@ -14,13 +44,19 @@ const ShowcaseCard = (props: ShowcaseCardProps): CardProps => {
         Child: () => {
             const ref = useRef<HTMLDivElement>(null);
             const imgRef = useRef<HTMLImageElement>(null);
+            const size = useWindowSize();
 
             useEffect(() => {
                 if (ref.current && imgRef.current) {
-                    // set img ref height as ref height
-                    imgRef.current.style.height = `${ref.current.clientHeight}px`;
+                    imgRef.current.style.height = '0px';
+                    // set img ref height as ref height unless ref height smaller than 100px
+                    if (ref.current.clientHeight < 100) {
+                        imgRef.current.style.height = `${imgRef.current.clientWidth}px`;
+                    } else {
+                        imgRef.current.style.height = `${ref.current.clientHeight}px`;
+                    }
                 }
-            }, [])
+            }, [size])
 
             return (
                 <div ref={ref} className={`h-full w-full relative`}>

@@ -9,7 +9,7 @@ const SocialCard = (link: string, img: string, text: string, icon_classes?: stri
                 <IconHolder parent_classes={icon_classes ?? ''}>
                     <Image src={img} alt={text} className="h-full w-auto" width={128} height={128} />
                 </IconHolder>
-                <div className="leading-5">
+                <div className="leading-5 mt-2">
                     <div>{text}</div>
                     {caption && <span className="text-sm opacity-medium">{caption}</span>}
                 </div>

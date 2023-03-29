@@ -11,7 +11,7 @@ const ResumeCard: CardProps = {
                     <IconHolder>
                         <FontAwesomeIcon icon={faFile} />
                     </IconHolder>
-                    <span>My Resume</span>
+                    <span className="mt-2">My Resume</span>
                 </div>
             </a>
         )
