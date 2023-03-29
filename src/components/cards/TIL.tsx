@@ -16,7 +16,7 @@ const TILCard = (props: TILCardProps): CardProps => {
                     </h4>
                     <p className="whitespace-normal mt-2 leading-5">
                         {props.text} <br/>
-                        <span className="opacity-medium text-wrap text-sm">gist updated: {props.date}</span>
+                        <span className="opacity-medium text-wrap text-sm">updated: {props.date}</span>
                     </p>
                 </div>
             )

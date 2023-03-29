@@ -65,7 +65,7 @@ const ShowcaseCard = (props: ShowcaseCardProps): CardProps => {
                         <img src={props.url} ref={imgRef} className="w-full h-0 object-cover" alt={props.caption} />
                     </div>
                     <h4 className="bg-white w-fit px-2 py-1 rounded text-sm bottom-3 left-3 absolute">
-                        {props.caption}
+                        📸&nbsp;{props.caption}
                     </h4>
                 </div>
             )

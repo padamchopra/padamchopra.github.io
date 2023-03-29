@@ -1,7 +1,7 @@
 import localFont from 'next/font/local'
 import Card, { ScreenSize } from '@/components/Card'
-import AboutCard from '@/components/cards/About'
-import ResumeCard from '@/components/cards/Resume'
+import AboutCard, { AboutCardProps } from '@/components/cards/About'
+import { LocatedInCard, ResumeCard } from '@/components/cards/IconWithText'
 import SchoolCard from '@/components/cards/School'
 import { GitHubCard, MessengerCard, TwitterCard, YoutubeCard } from '@/components/cards/Social'
 import classNames from 'classnames'
@@ -10,10 +10,12 @@ import React from 'react'
 import TILCard, { TILCardProps } from '@/components/cards/TIL'
 import ShowcaseCard, { ShowcaseCardProps } from '@/components/cards/Showcase'
 import SongOfYearCard, { SongOfYearProps } from '@/components/cards/SongOfYear'
+import { BibliotecaProjectCard, HabitusProjectCard, PractikalityProjectCard, VMProjectCard } from '@/components/cards/Project'
 
 const switzer = localFont({src: './fonts/switzer.ttf'})
 
 type HomeProps = {
+  about_card_props: AboutCardProps,
   til_card_props: TILCardProps,
   showcase_card_props: ShowcaseCardProps,
   song_of_year_props: SongOfYearProps,
@@ -21,6 +23,10 @@ type HomeProps = {
 
 export default function Home() {
   let props: HomeProps = {
+    about_card_props: {
+      building_name: 'padamchopra.me',
+      building_link: 'https://padamchopra.me',
+    },
     til_card_props: { text: 'Using firebase as cms for website', date: '2023-03-28' },
     showcase_card_props: {
       url: 'https://firebasestorage.googleapis.com/v0/b/padamchopra-me.appspot.com/o/IMG_1389.jpeg?alt=media&token=cc152eee-5746-435a-9fc3-a3c230ef85d6',
@@ -31,17 +37,22 @@ export default function Home() {
     }
   }
   const cards = [
-    AboutCard,
+    AboutCard(props.about_card_props),
     ResumeCard,
     SchoolCard,
     YoutubeCard,
     TwitterCard,
     MessengerCard,
     GitHubCard,
+    LocatedInCard,
     WorkExperienceCard,
     TILCard(props.til_card_props),
     ShowcaseCard(props.showcase_card_props),
-    SongOfYearCard(props.song_of_year_props)
+    SongOfYearCard(props.song_of_year_props),
+    HabitusProjectCard,
+    VMProjectCard,
+    PractikalityProjectCard,
+    BibliotecaProjectCard,
   ]
 
   let key = 0;
