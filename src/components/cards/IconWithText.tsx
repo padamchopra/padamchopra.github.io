@@ -1,4 +1,4 @@
-import { faFile, faLocationDot, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { faAward, faFile, faLocationDot, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CardProps } from "../Card";
 import IconHolder from "../IconHolder";
