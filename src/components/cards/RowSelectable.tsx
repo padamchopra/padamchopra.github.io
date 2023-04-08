@@ -61,7 +61,7 @@ const RowSelectableCard = (type: RowSelectableCardType, rows: RowItemDesc[]) => 
                 <>
                     {rows.map((row) => {
                         const divClasses = classNames(
-                            'w-full border-b border-t px-4 py-2 flex justify-between',
+                            'w-full border-b border-t px-4 py-2 flex justify-between cursor-pointer',
                             { 'bg-gray-100': row.key == selectedExperienceShort.key },
                             { 'hover:bg-gray-50': row.key != selectedExperienceShort.key }
                         )

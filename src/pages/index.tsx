@@ -27,8 +27,8 @@ export default function Home(props: HomeProps) {
     AboutCard(props.about_card_props),
     ResumeCard,
     SchoolCard,
-    YoutubeCard,
     TwitterCard,
+    YoutubeCard,
     MessengerCard,
     GitHubCard,
     LocatedInCard,
@@ -79,7 +79,7 @@ export async function getStaticProps() {
       building_name: 'padamchopra.me',
       building_link: 'https://padamchopra.me',
     },
-    til_card_props: { text: 'Using firebase as cms for website', date: '2023-03-28' },
+    til_card_props: { text: 'Using firebase as cms for website', date: '2023-03-28', link: '#' },
     showcase_card_props: {
       url: 'https://firebasestorage.googleapis.com/v0/b/padamchopra-me.appspot.com/o/IMG_1389.jpeg?alt=media&token=cc152eee-5746-435a-9fc3-a3c230ef85d6',
       caption: 'Art Gallery Ontario'
@@ -100,6 +100,7 @@ export async function getStaticProps() {
       til_card_props: {
         text: fields["til_text"]["stringValue"],
         date: fields["til_update"]["timestampValue"].split('T')[0],
+        link: fields["til_link"]["stringValue"],
       },
       showcase_card_props: {
         url: fields["showcase_url"]["stringValue"],

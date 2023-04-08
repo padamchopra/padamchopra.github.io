@@ -2,12 +2,14 @@ import { CardProps, CardSize } from "../Card";
 
 export type TILCardProps = {
     text: string,
+    link: string,
     date: string,
 }
 
 const TILCard = (props: TILCardProps): CardProps => {
     return {
         card_size: CardSize.Medium,
+        card_link: props.link,
         Child: () => {
             return (
                 <div className="flex flex-col justify-between h-full">

@@ -1,5 +1,6 @@
 import classNames from "classnames";
-import React, { ReactNode} from "react"
+import Link from "next/link";
+import React, { ReactNode, useEffect, useState} from "react"
 
 export enum ScreenSize {
     Default = 'grid-cols-2',
@@ -20,6 +21,7 @@ export enum CardHeight {
 }
 
 export type CardProps = {
+    card_link?: string,
     parent_classes?: string,
     apply_default_padding?: boolean,
     card_size?: CardSize,
@@ -30,6 +32,11 @@ export type CardProps = {
 export default function Card(props: CardProps) {
     const card_size = props.card_size ?? CardSize.Square;
     const card_height = props.card_height ?? CardHeight.Default;
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
 
     let card_classes = classNames(
         {'p-4': props.apply_default_padding ?? true},
@@ -43,9 +50,14 @@ export default function Card(props: CardProps) {
         {'sm:col-span-3': card_size == CardSize.Large},
     )
 
-    return (
+    return isClient && props.card_link ? (
+        <a className={card_classes} href={props.card_link} target="_blank">
+            <article className="h-full w-full">
+                <props.Child />
+            </article>
+        </a>
+    ) : (
         <article className={card_classes}>
-            {/* dark:bg-neutral-900 dark:border-neutral-800 dark:hover:shadow-neutral-900 */}
             <props.Child />
         </article>
     )

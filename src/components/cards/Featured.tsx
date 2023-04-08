@@ -10,21 +10,20 @@ type FeaturedCardProps = {
 const FeaturedCard = (props: FeaturedCardProps): CardProps => {
     return {
         card_size: CardSize.Square,
+        card_link: props.link,
         Child: () => {
             const tag_bg = props.tag_bg ?? ''
             const tag_txt = props.tag_bg ? 'text-white' : 'text-black'
             return (
-                <a href={props.link} target="_blank">
-                    <div className="flex flex-col justify-between h-full">
-                        <h4 className={`w-fit px-2 py-1 rounded text-sm border ${tag_bg} ${tag_txt}`}>
-                            Featured
-                        </h4>
-                        <div className="leading-5 mt-2">
-                            <div className="text-lg">{props.name}</div>
-                            {props.caption && <span className="text-sm opacity-70">{props.caption}</span>}
-                        </div>
+                <div className="flex flex-col justify-between h-full">
+                    <h4 className={`w-fit px-2 py-1 rounded text-sm border ${tag_bg} ${tag_txt}`}>
+                        Featured on
+                    </h4>
+                    <div className="leading-5 mt-2">
+                        <div className="text-lg">{props.name}</div>
+                        {props.caption && <span className="text-sm opacity-70">{props.caption}</span>}
                     </div>
-                </a>
+                </div>
             )
         }
     }
