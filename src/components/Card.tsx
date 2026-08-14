@@ -26,7 +26,7 @@ export type CardProps = {
     apply_default_padding?: boolean,
     card_size?: CardSize,
     card_height?: CardHeight,
-    Child: () => JSX.Element,
+    Child: () => React.JSX.Element,
 }
 
 export default function Card(props: CardProps) {
