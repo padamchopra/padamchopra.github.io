@@ -94,29 +94,27 @@ export async function getStaticProps() {
     const fields = data["fields"]
     home_props = {
       about_card_props: {
-        building_name: fields["building_name"]["stringValue"],
-        building_link: fields["building_link"]["stringValue"],
+        building_name: fields?.["building_name"]?.["stringValue"] ?? home_props.about_card_props.building_name,
+        building_link: fields?.["building_link"]?.["stringValue"] ?? home_props.about_card_props.building_link,
       },
       til_card_props: {
-        text: fields["til_text"]["stringValue"],
-        date: fields["til_update"]["timestampValue"].split('T')[0],
-        link: fields["til_link"]["stringValue"],
+        text: fields?.["til_text"]?.["stringValue"] ?? home_props.til_card_props.text,
+        date: String(fields?.["til_update"]?.["timestampValue"] ?? home_props.til_card_props.date).slice(0, 10),
+        link: fields?.["til_link"]?.["stringValue"] ?? home_props.til_card_props.link,
       },
       showcase_card_props: {
-        url: fields["showcase_url"]["stringValue"],
-        caption: fields["showcase_caption"]["stringValue"],
+        url: fields?.["showcase_url"]?.["stringValue"] ?? home_props.showcase_card_props.url,
+        caption: fields?.["showcase_caption"]?.["stringValue"] ?? home_props.showcase_card_props.caption,
       },
       song_of_year_props: {
-        link: fields["song_of_year"]["stringValue"],
+        link: fields?.["song_of_year"]?.["stringValue"] ?? home_props.song_of_year_props.link,
       },
     }
-    console.log(home_props)
   } catch (err) {
     // default to what was initialized
   }
 
   return {
     props: home_props,
-    revalidate: 86400, //seconds
   }
 }

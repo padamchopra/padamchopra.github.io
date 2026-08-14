@@ -1,12 +1,11 @@
 import IconHolder from "@/components/IconHolder";
-import Image from "next/image";
 import { CardProps } from "../Card";
 
 const SocialCard = (img: string, text: string, icon_classes?: string, caption?: string) => {
     return (
         <div className="flex flex-col justify-between h-full">
             <IconHolder parent_classes={icon_classes ?? ''}>
-                <Image src={img} alt={text} className="h-full w-auto" width={128} height={128} />
+                <img src={img} alt={text} className="h-full w-auto" />
             </IconHolder>
             <div className="leading-5 mt-2">
                 <div>{text}</div>
