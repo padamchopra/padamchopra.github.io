@@ -12,7 +12,7 @@ export const site = {
 
 export const bio = {
   one: "I make software for phones, the web, and the gaps in between — products, sites, and tools I wanted for myself. If something should exist, I’d rather just build it.",
-  two: "These days that’s Jupiter, from Dubai. I work on the mobile app, mostly Android and Flutter, close to the product. Before that I did Android at Airchat, 1Password, Ritual, and Ceridian, and Computer Science at Waterloo.",
+  two: "These days that’s Jupiter, from Dubai. I work on the Android app, native, the backends around it, and the AI setup the team ships with. Before that I did Android at Airchat, theScore, 1Password, Ritual, and Ceridian, and Computer Science at Waterloo.",
   three:
     "Lately, on my own time, I’ve been building the tools around how I actually work: Sideload, Mission Control, a Linear CLI. Same itch — if I want it, I make it.",
 }

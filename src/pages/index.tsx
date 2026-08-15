@@ -18,13 +18,14 @@ export default function Home() {
           </p>
           <p>
             These days that’s{" "}
-            <IcoLink href={current.href}>{current.company}</IcoLink>, from{" "}
-            {current.location}. I work on the mobile app, mostly Android and
-            Flutter, close to the product. Before that I did Android at{" "}
+            <IcoLink href={current.href}>{current.company}</IcoLink>, from Dubai.
+            I work on the Android app, native, the backends
+            around it, and the AI setup the team ships with. Before that I did Android at{" "}
             <IcoLink href={work[1].href}>{work[1].company}</IcoLink>,{" "}
             <IcoLink href={work[2].href}>{work[2].company}</IcoLink>,{" "}
-            <IcoLink href={work[3].href}>{work[3].company}</IcoLink>, and{" "}
-            <IcoLink href={work[4].href}>Ceridian</IcoLink>, and Computer Science
+            <IcoLink href={work[3].href}>{work[3].company}</IcoLink>,{" "}
+            <IcoLink href={work[4].href}>{work[4].company}</IcoLink>, and{" "}
+            <IcoLink href={work[5].href}>Ceridian</IcoLink>, and Computer Science
             at <IcoLink href="https://uwaterloo.ca">Waterloo</IcoLink>.
           </p>
           <p>
