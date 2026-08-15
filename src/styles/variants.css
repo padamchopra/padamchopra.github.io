@@ -508,3 +508,91 @@ html.dark .v-paper {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.v-atlas {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1.4rem;
+  background: var(--v-rail);
+  border: 1px solid var(--v-rule);
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+}
+
+.v-atlas.is-grabbing {
+  cursor: grabbing;
+}
+
+.v-atlas-land {
+  fill: color-mix(in srgb, var(--v-ink) 14%, var(--v-rail));
+  stroke: color-mix(in srgb, var(--v-ink) 28%, var(--v-rail));
+  stroke-width: 0.9;
+  vector-effect: non-scaling-stroke;
+}
+
+.v-atlas-grid {
+  fill: none;
+  stroke: color-mix(in srgb, var(--v-ink) 12%, var(--v-rail));
+  stroke-width: 0.45;
+  opacity: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.v-atlas-hit {
+  fill: transparent;
+  cursor: pointer;
+}
+
+.v-atlas-dot {
+  fill: var(--v-mute);
+  pointer-events: none;
+  transition: fill 0.14s ease-out, r 0.14s ease-out;
+}
+
+.v-atlas-dot.is-on {
+  fill: var(--v-accent);
+}
+
+.v-atlas-label {
+  fill: var(--v-ink);
+  font-size: 11px;
+  font-family: var(--font-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  pointer-events: none;
+  paint-order: stroke;
+  stroke: var(--v-rail);
+  stroke-width: 3px;
+}
+
+.v-atlas-legend {
+  fill: var(--v-mute);
+  font-size: 11px;
+  font-family: var(--font-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  pointer-events: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.v-place-btn {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.v-place-btn.is-on,
+.v-paper .v-role.is-on {
+  color: var(--v-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v-atlas-dot {
+    transition: none;
+  }
+}
