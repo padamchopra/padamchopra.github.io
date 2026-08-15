@@ -3,8 +3,8 @@ export const site = {
   description:
     "Padam Chopra makes software for phones, the web, and the gaps in between. Currently Jupiter, based in Dubai.",
   socials: [
-    { label: "GitHub", href: "https://github.com/padamchopra" },
     { label: "X", href: "https://x.com/PadamChopra_" },
+    { label: "GitHub", href: "https://github.com/padamchopra" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/padamchopra" },
     { label: "Resume", href: "/resume.pdf" },
   ],
@@ -32,4 +32,5 @@ export const nav = [
   { href: "/places", label: "Places" },
   { href: "/watched", label: "Watched" },
   { href: "/notes", label: "Notes" },
+  { href: "/changelog", label: "Changelog" },
 ] as const

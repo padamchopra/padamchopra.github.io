@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout"
-import { favorites, watchingNow, type WatchItem } from "@/data/watching"
+import { recommendations, seen, watchingNow, type WatchItem } from "@/data/watching"
 
 function WatchList({ items, empty }: { items: WatchItem[]; empty: string }) {
   if (items.length === 0) {
@@ -26,17 +26,22 @@ export default function WatchedPage() {
   return (
     <Layout
       title="Watched"
-      description="Shows and films Padam Chopra is watching, and the ones that stuck."
+      description="Shows and films Padam Chopra is watching, recommends, and has seen."
     >
       <section className="v-block">
-        <h2>Now</h2>
-        <p className="dek">What’s on, lately.</p>
+        <h2>Currently watching</h2>
+        <p className="dek">What’s on.</p>
         <WatchList items={watchingNow} empty="Nothing in progress." />
       </section>
       <section className="v-block">
-        <h2>Favorites</h2>
-        <p className="dek">The ones that stuck.</p>
-        <WatchList items={favorites} empty="Nothing here yet." />
+        <h2>Recommendations</h2>
+        <p className="dek">If you ask me what to watch.</p>
+        <WatchList items={recommendations} empty="Nothing here yet." />
+      </section>
+      <section className="v-block">
+        <h2>Seen</h2>
+        <p className="dek">Not recs. Just things I’ve watched.</p>
+        <WatchList items={seen} empty="Nothing here yet." />
       </section>
     </Layout>
   )

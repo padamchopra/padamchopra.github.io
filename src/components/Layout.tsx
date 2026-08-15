@@ -8,10 +8,12 @@ import { nav, site } from "@/data/site"
 export default function Layout({
   title,
   description,
+  fill,
   children,
 }: {
   title?: string
   description?: string
+  fill?: boolean
   children: ReactNode
 }) {
   const { pathname } = useRouter()
@@ -52,7 +54,11 @@ export default function Layout({
         <title>{pageTitle}</title>
         <meta name="description" content={description || site.description} />
       </Head>
-      <div className={menuOpen ? "v-root v-paper is-menu" : "v-root v-paper"}>
+      <div
+        className={["v-root v-paper", menuOpen ? "is-menu" : "", fill ? "is-fill" : ""]
+          .filter(Boolean)
+          .join(" ")}
+      >
         <a className="skip-link" href="#content">
           Skip to content
         </a>
@@ -86,7 +92,7 @@ export default function Layout({
         <aside
           id="site-nav"
           className="v-side"
-          aria-hidden={compact && !menuOpen}
+          aria-hidden={compact && !menuOpen ? true : undefined}
           inert={compact && !menuOpen ? true : undefined}
         >
           <nav className="v-nav" aria-label="Sections">
@@ -120,7 +126,7 @@ export default function Layout({
             ))}
           </div>
         </aside>
-        <main id="content" className="v-main">
+        <main id="content" className={fill ? "v-main is-fill" : "v-main"}>
           <div className="v-mast">
             <div className="v-title">
               {home ? (

@@ -4,7 +4,7 @@ const themeScript = `(function(){try{var t=localStorage.getItem("padam-theme");d
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" suppressHydrationWarning>
       <Head>
         <meta
           name="description"

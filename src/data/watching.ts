@@ -7,4 +7,6 @@ export type WatchItem = {
 
 export const watchingNow: WatchItem[] = []
 
-export const favorites: WatchItem[] = []
+export const recommendations: WatchItem[] = []
+
+export const seen: WatchItem[] = []

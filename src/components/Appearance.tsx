@@ -13,7 +13,11 @@ export default function Appearance() {
 
   const choose = (next: boolean) => {
     setDark(next)
-    window.localStorage.setItem(STORAGE_KEY, next ? "dark" : "light")
+    try {
+      window.localStorage.setItem(STORAGE_KEY, next ? "dark" : "light")
+    } catch {
+      // ignore blocked storage
+    }
     document.documentElement.classList.toggle("dark", next)
   }
 

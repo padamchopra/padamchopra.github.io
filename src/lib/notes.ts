@@ -2,6 +2,8 @@ import fs from "fs"
 import path from "path"
 import { marked } from "marked"
 
+marked.use({ gfm: true })
+
 export type Note = {
   slug: string
   title: string
