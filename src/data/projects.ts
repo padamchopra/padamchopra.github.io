@@ -1,4 +1,5 @@
 export type ProjectItem = {
+  slug: string
   name: string
   href: string
   year?: string
@@ -11,6 +12,7 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
   {
+    slug: "sideload",
     name: "Sideload",
     href: "https://github.com/padamchopra/Sideload",
     stack: "macOS",
@@ -19,6 +21,7 @@ export const projects: ProjectItem[] = [
     line: "Menu bar that sideloads Android debug APKs.",
   },
   {
+    slug: "mission-control",
     name: "Mission Control",
     href: "https://github.com/padamchopra/mission-control",
     stack: "iOS",
@@ -26,6 +29,7 @@ export const projects: ProjectItem[] = [
     line: "iPhone remote for coding sessions on my Mac.",
   },
   {
+    slug: "linear-cli",
     name: "linear-cli",
     href: "https://github.com/padamchopra/linear-cli",
     stack: "CLI",
@@ -33,6 +37,7 @@ export const projects: ProjectItem[] = [
     line: "A small Linear client I actually use.",
   },
   {
+    slug: "habitus",
     name: "Habitus",
     href: "https://github.com/padamchopra/habitus-cross",
     stack: "Flutter",
@@ -43,6 +48,7 @@ export const projects: ProjectItem[] = [
     icon: "/logos/habitus.png",
   },
   {
+    slug: "practikality",
     name: "Practikality",
     href: "https://www.youtube.com/watch?v=VhdyqzMQOGE",
     stack: "Android",
@@ -52,6 +58,7 @@ export const projects: ProjectItem[] = [
     still: "https://i.ytimg.com/vi/VhdyqzMQOGE/hqdefault.jpg",
   },
   {
+    slug: "biblioteca",
     name: "Biblioteca",
     href: "https://github.com/padamchopra/Biblioteca",
     stack: "Android · Compose",
@@ -60,6 +67,7 @@ export const projects: ProjectItem[] = [
     line: "Live Compose theme library.",
   },
   {
+    slug: "vm",
     name: "VM",
     href: "https://github.com/padamchopra/vm",
     stack: "C++",

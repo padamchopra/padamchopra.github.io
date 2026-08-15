@@ -3,20 +3,27 @@ import { places } from "@/data/places"
 
 export default function PlacesPage() {
   return (
-    <Layout title="Places" description="Cities Padam Chopra has lived in or passed through long enough to count.">
+    <Layout title="Places" description="Cities and countries Padam Chopra has visited.">
       <section className="v-block">
         <h2>Places</h2>
-        <ol className="v-work">
-          {places.map((place) => (
-            <li key={`${place.city}-${place.period}`}>
-              <div className="v-pos">
-                <span>{place.city}</span>
-                {place.note ? <span className="v-role">{place.note}</span> : null}
-              </div>
-              <span className="v-when">{place.period}</span>
-            </li>
-          ))}
-        </ol>
+        <p className="dek">Where I’ve been.</p>
+        {places.length === 0 ? (
+          <p className="v-empty">Nothing here yet.</p>
+        ) : (
+          <ol className="v-articles">
+            {places.map((place) => (
+              <li className="v-article" key={`${place.city}-${place.year || place.country}`}>
+                <div className="v-article-top">
+                  <span>
+                    {place.city}, {place.country}
+                  </span>
+                  {place.year ? <span className="v-when">{place.year}</span> : null}
+                </div>
+                {place.note ? <p>{place.note}</p> : null}
+              </li>
+            ))}
+          </ol>
+        )}
       </section>
     </Layout>
   )

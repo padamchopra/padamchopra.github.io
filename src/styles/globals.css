@@ -34,14 +34,14 @@ html {
 
 html,
 body {
-  background: #f3efe6;
-  color: #1c1915;
+  background: #f4f1ea;
+  color: #1a1916;
 }
 
 html.dark,
 html.dark body {
-  background: #1b1916;
-  color: #efe8dc;
+  background: #161513;
+  color: #ece7dc;
 }
 
 body {

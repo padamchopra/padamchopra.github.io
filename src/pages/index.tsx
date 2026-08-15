@@ -71,7 +71,7 @@ export default function Home() {
         </h2>
         <ul className="v-projects">
           {projects.map((project) => (
-            <li key={project.name}>
+            <li key={project.slug}>
               <IcoLink href={project.href} icon={project.icon} size="row">
                 {project.name}
               </IcoLink>

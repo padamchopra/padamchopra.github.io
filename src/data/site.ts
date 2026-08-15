@@ -18,9 +18,9 @@ export const bio = {
 }
 
 export const more = [
-  { href: "/press", label: "Press", line: "A few things that got written down." },
-  { href: "/places", label: "Places", line: "Where I’ve been long enough to count." },
-  { href: "/watching", label: "Watching", line: "Films and shows." },
+  { href: "/links", label: "Links", line: "Collections I keep." },
+  { href: "/places", label: "Places", line: "Where I’ve been." },
+  { href: "/watched", label: "Watched", line: "Shows and films." },
   { href: "/notes", label: "Notes", line: "Stray writing." },
 ] as const
 
@@ -28,8 +28,8 @@ export const nav = [
   { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
   { href: "/projects", label: "Projects" },
-  { href: "/press", label: "Press" },
+  { href: "/links", label: "Links" },
   { href: "/places", label: "Places" },
-  { href: "/watching", label: "Watching" },
+  { href: "/watched", label: "Watched" },
   { href: "/notes", label: "Notes" },
 ] as const
