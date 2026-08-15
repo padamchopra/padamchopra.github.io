@@ -271,8 +271,8 @@ html.dark .v-paper {
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
+  display: inline;
+  vertical-align: baseline;
   transition: color 0.14s ease-out;
 }
 
@@ -280,7 +280,7 @@ html.dark .v-paper {
   width: 1em;
   height: 1em;
   object-fit: cover;
-  vertical-align: middle;
+  vertical-align: -0.2em;
   border-radius: 0.2em;
   margin-inline-end: 0.3em;
   display: inline-block;
