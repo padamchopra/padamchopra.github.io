@@ -1,120 +1,86 @@
-import localFont from 'next/font/local'
-import Card, { ScreenSize } from '@/components/Card'
-import AboutCard, { AboutCardProps } from '@/components/cards/About'
-import { LocatedInCard, ResumeCard } from '@/components/cards/IconWithText'
-import SchoolCard from '@/components/cards/School'
-import { GitHubCard, MessengerCard, TwitterCard, YoutubeCard } from '@/components/cards/Social'
-import classNames from 'classnames'
-import { AwardsCard, WorkExperienceCard } from '@/components/cards/RowSelectable'
-import React from 'react'
-import TILCard, { TILCardProps } from '@/components/cards/TIL'
-import ShowcaseCard, { ShowcaseCardProps } from '@/components/cards/Showcase'
-import SongOfYearCard, { SongOfYearProps } from '@/components/cards/SongOfYear'
-import { BibliotecaProjectCard, HabitusProjectCard, PractikalityProjectCard, VMProjectCard } from '@/components/cards/Project'
-import { AlgorandFeatureCard, DigitMagazineFeatureCard, IeltsFeatureCard, ImagineCupFeatureCard, MicrosoftFeatureCard, YourStoryFeatureCard } from '@/components/cards/Featured'
+import Link from "next/link"
+import IcoLink from "@/components/IcoLink"
+import Layout from "@/components/Layout"
+import { projects } from "@/data/projects"
+import { work } from "@/data/work"
 
-const switzer = localFont({src: './fonts/switzer.ttf'})
-
-type HomeProps = {
-  about_card_props: AboutCardProps,
-  til_card_props: TILCardProps,
-  showcase_card_props: ShowcaseCardProps,
-  song_of_year_props: SongOfYearProps,
-}
-
-export default function Home(props: HomeProps) {
-  const cards = [
-    AboutCard(props.about_card_props),
-    ResumeCard,
-    SchoolCard,
-    TwitterCard,
-    YoutubeCard,
-    MessengerCard,
-    GitHubCard,
-    LocatedInCard,
-    WorkExperienceCard,
-    TILCard(props.til_card_props),
-    ShowcaseCard(props.showcase_card_props),
-    SongOfYearCard(props.song_of_year_props),
-    HabitusProjectCard,
-    VMProjectCard,
-    PractikalityProjectCard,
-    BibliotecaProjectCard,
-    AwardsCard,
-    AlgorandFeatureCard,
-    IeltsFeatureCard,
-    MicrosoftFeatureCard,
-    ImagineCupFeatureCard,
-    YourStoryFeatureCard,
-    DigitMagazineFeatureCard
-  ]
-
-  let key = 0;
-  let gridClasses = classNames(
-    'grid gap-4 grid-flow-row-dense py-4 px-1 m-auto transition-all',
-    'xs:w-[420px] sm:w-[640px] lg:w-[1024px] 2xl:w-[1536px]',
-    'sm:px-4 sm:grid-rows-10',
-    ScreenSize.Default,
-    ScreenSize.Small,
-    ScreenSize.Large,
-    ScreenSize.XXLarge,
-  )
+export default function Home() {
+  const current = work[0]
 
   return (
-    <div className={switzer.className}>
-      <div className={gridClasses}>
-        {
-          cards.map((card) => (
-            <Card key={key++} {...card} />
-          )
-        )}
-      </div>
-    </div>
+    <Layout>
+      <section className="v-hero">
+        <div className="v-prose">
+          <p>
+            I make software for phones, the web, and the gaps in between —
+            products, sites, and tools I wanted for myself. If something should
+            exist, I’d rather just build it.
+          </p>
+          <p>
+            These days that’s{" "}
+            <IcoLink href={current.href}>{current.company}</IcoLink>, from Dubai.
+            I work on the Android app, native, the backends
+            around it, and the AI setup the team ships with. Before that I did Android at{" "}
+            <IcoLink href={work[1].href}>{work[1].company}</IcoLink>,{" "}
+            <IcoLink href={work[2].href}>{work[2].company}</IcoLink>,{" "}
+            <IcoLink href={work[3].href}>{work[3].company}</IcoLink>,{" "}
+            <IcoLink href={work[4].href}>{work[4].company}</IcoLink>, and{" "}
+            <IcoLink href={work[5].href}>Ceridian</IcoLink>, and Computer Science
+            at <IcoLink href="https://uwaterloo.ca">Waterloo</IcoLink>.
+          </p>
+          <p>
+            Lately, on my own time, I’ve been building the tools around how I
+            actually work.{" "}
+            <IcoLink href="https://github.com/padamchopra/Sideload">Sideload</IcoLink>{" "}
+            is a Mac menu bar that builds and installs Android debug APKs from a
+            checkout.{" "}
+            <IcoLink href="https://github.com/padamchopra/mission-control">
+              Mission Control
+            </IcoLink>{" "}
+            is an iPhone remote for a fleet of coding sessions on my Mac.{" "}
+            <IcoLink href="https://github.com/padamchopra/linear-cli">
+              linear-cli
+            </IcoLink>{" "}
+            is a small Linear client I actually use. Same itch — if I want it, I
+            make it.
+          </p>
+        </div>
+      </section>
+
+      <section className="v-block" id="work">
+        <h2>
+          <Link href="/work">Work</Link>
+        </h2>
+        <ol className="v-work">
+          {work.map((job) => (
+            <li key={`${job.company}-${job.years}`}>
+              <div className="v-pos">
+                <IcoLink href={job.href} size="row">
+                  {job.company}
+                </IcoLink>
+                <span className="v-role">{job.role}</span>
+              </div>
+              <span className="v-when">{job.years}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="v-block" id="projects">
+        <h2>
+          <Link href="/projects">Projects</Link>
+        </h2>
+        <ul className="v-projects">
+          {projects.map((project) => (
+            <li key={project.slug}>
+              <IcoLink href={project.href} icon={project.icon} size="row">
+                {project.name}
+              </IcoLink>
+              <span className="v-role">{project.line}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </Layout>
   )
-}
-
-export async function getStaticProps() {
-  let home_props: HomeProps = {
-    about_card_props: {
-      building_name: 'padamchopra.me',
-      building_link: 'https://padamchopra.me',
-    },
-    til_card_props: { text: 'Using firebase as cms for website', date: '2023-03-28', link: '#' },
-    showcase_card_props: {
-      url: 'https://firebasestorage.googleapis.com/v0/b/padamchopra-me.appspot.com/o/IMG_1389.jpeg?alt=media&token=cc152eee-5746-435a-9fc3-a3c230ef85d6',
-      caption: 'Art Gallery Ontario'
-    },
-    song_of_year_props: {
-      link: 'https://open.spotify.com/embed/track/2t0wwvR15fc3K1ey8OiOaN?utm_source=generator&theme=0'
-    }
-  }
-  try {
-    const res = await fetch('https://firestore.googleapis.com/v1/projects/padamchopra-me/databases/(default)/documents/website/home')
-    const data = await res.json()
-    const fields = data["fields"]
-    home_props = {
-      about_card_props: {
-        building_name: fields?.["building_name"]?.["stringValue"] ?? home_props.about_card_props.building_name,
-        building_link: fields?.["building_link"]?.["stringValue"] ?? home_props.about_card_props.building_link,
-      },
-      til_card_props: {
-        text: fields?.["til_text"]?.["stringValue"] ?? home_props.til_card_props.text,
-        date: String(fields?.["til_update"]?.["timestampValue"] ?? home_props.til_card_props.date).slice(0, 10),
-        link: fields?.["til_link"]?.["stringValue"] ?? home_props.til_card_props.link,
-      },
-      showcase_card_props: {
-        url: fields?.["showcase_url"]?.["stringValue"] ?? home_props.showcase_card_props.url,
-        caption: fields?.["showcase_caption"]?.["stringValue"] ?? home_props.showcase_card_props.caption,
-      },
-      song_of_year_props: {
-        link: fields?.["song_of_year"]?.["stringValue"] ?? home_props.song_of_year_props.link,
-      },
-    }
-  } catch (err) {
-    // default to what was initialized
-  }
-
-  return {
-    props: home_props,
-  }
 }
