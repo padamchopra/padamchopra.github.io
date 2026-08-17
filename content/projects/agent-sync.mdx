@@ -1,7 +1,12 @@
 I was copying the same skill into `~/.claude/skills` and then into `~/.codex/skills`. Twice, every time, on every machine.
 
-<Shot src="/projects/agent-sync/terminal.svg" alt="agent-sync linking skills into Claude and Codex" />
+<Shot src="/shots/agent-sync/terminal.svg" alt="agent-sync linking skills into Claude and Codex" />
 
-agent-sync is the canonical copy. A small CLI symlinks each skill and agent one level deep into both homes, and leaves anything it didn’t create alone.
+agent-sync is the canonical copy. A small CLI symlinks each skill and agent one level deep into both homes, and leaves anything it didn’t create alone. On a new machine: clone the repo, run `./install.sh`. There’s also `agent-sync push` / `autosync` so design references travel with the skills.
+
+```text
+skills/<name>/  →  ~/.claude/skills/<name>
+                →  ~/.codex/skills/<name>
+```
 
 The weird bit: the agent folders stay real directories. Nested files still work because the symlink is the whole skill, not a file inside it. Codex’s built-in `.system` skills are gitignored so they never get sucked into the repo.

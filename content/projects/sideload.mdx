@@ -1,9 +1,9 @@
-I live in git worktrees. An agent takes a ticket, I get a folder, I want that folder’s debug APK on a phone. I did not want to open Android Studio for that.
+I live in git worktrees. An agent takes a ticket, I get a folder, I want that folder’s debug APK on a phone. Android Studio can do this. I did not want to open Android Studio.
 
-<Shot src="/projects/sideload/popover.png" alt="Sideload menu bar, Pixel 9 Pro connected" width="panel" />
+<Shot src="/shots/sideload/popover.png" alt="Sideload menu bar, Pixel 9 Pro connected" width="panel" />
 
-Sideload is a Mac menu bar. Add a repo. It lists the main checkout and every worktree `git worktree list` already knows about. Pick one, install. If nothing is plugged in, it starts the default emulator.
+Sideload is a Mac menu bar. Add a repo (the folder with `.git`, or its `android/` directory). It lists the main checkout and every worktree `git worktree list` already knows about. Pick one, hit Install. If nothing is plugged in, it starts the default AVD.
 
-<Shot src="/projects/sideload/worktrees.png" alt="Searching local git worktrees to install from" width="panel" />
+<Shot src="/shots/sideload/worktrees.png" alt="Searching local git worktrees to install from" width="panel" />
 
-Worktrees are discovered, not registered — there’s no second list to keep in sync. The fiddly part is the rest of Android: a JDK, the SDK, and a device that might not be there. Merges to `main` cut a GitHub Release; the app can replace itself.
+Worktrees are discovered, not registered — there’s no second list to keep in sync. The fiddly part is the rest of Android: a JDK (Studio’s JBR is fine), the SDK at `~/Library/Android/sdk` or `ANDROID_HOME`, and a device that might not be there. Merges to `main` cut a GitHub Release; the app checks that on launch and can replace itself.

@@ -31,6 +31,25 @@ const mdxComponents = {
     }
     return <IcoLink href={href}>{children}</IcoLink>
   },
+  img: function MdxImg({
+    src,
+    alt,
+    ...rest
+  }: React.ImgHTMLAttributes<HTMLImageElement>) {
+    const path = typeof src === "string" ? src : ""
+    const phone = /mission-control|habitus\//.test(path)
+    const panel = /sideload|whisperz/.test(path)
+    return (
+      <figure
+        className={["v-shot", phone ? "is-phone" : panel ? "is-panel" : ""]
+          .filter(Boolean)
+          .join(" ")}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} alt={alt || ""} {...rest} />
+      </figure>
+    )
+  },
   Shot: function Shot({
     src,
     alt,
