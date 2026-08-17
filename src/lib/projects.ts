@@ -1,10 +1,7 @@
-import fs from "fs"
-import path from "path"
-import { serialize } from "next-mdx-remote/serialize"
-import remarkGfm from "remark-gfm"
-import type { MDXRemoteSerializeResult } from "next-mdx-remote"
+import { marked } from "marked"
+import writeups from "@/data/projectWriteups.json"
 
-const PROJECTS_DIR = path.join(process.cwd(), "content/projects")
+marked.use({ gfm: true })
 
 function parseFrontMatter(raw: string) {
   const match = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/)
@@ -20,16 +17,32 @@ function parseFrontMatter(raw: string) {
   return { meta, body: match[2] }
 }
 
-export async function getProjectMdx(
-  slug: string,
-): Promise<MDXRemoteSerializeResult | null> {
-  const file = path.join(PROJECTS_DIR, `${slug}.mdx`)
-  if (!fs.existsSync(file)) return null
-  const raw = fs.readFileSync(file, "utf8")
+function escapeAttr(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+}
+
+function shotToHtml(attrs: string) {
+  const src = attrs.match(/src="([^"]*)"/)?.[1] ?? ""
+  const alt = attrs.match(/alt="([^"]*)"/)?.[1] ?? ""
+  const width = attrs.match(/width="([^"]*)"/)?.[1]
+  const cls =
+    width === "phone"
+      ? "v-shot is-phone"
+      : width === "panel"
+        ? "v-shot is-panel"
+        : "v-shot"
+  return `\n\n<figure class="${cls}"><img src="${escapeAttr(src)}" alt="${escapeAttr(alt)}" /></figure>\n\n`
+}
+
+export function getProjectHtml(slug: string): string | null {
+  const raw = (writeups as Record<string, string>)[slug]
+  if (typeof raw !== "string") return null
   const { body } = parseFrontMatter(raw)
-  return serialize(body, {
-    mdxOptions: {
-      remarkPlugins: [remarkGfm],
-    },
-  })
+  const withShots = body.replace(/<Shot\s+([^>]*?)\s*\/>/g, (_, attrs: string) =>
+    shotToHtml(attrs),
+  )
+  return marked.parse(withShots, { async: false }) as string
 }

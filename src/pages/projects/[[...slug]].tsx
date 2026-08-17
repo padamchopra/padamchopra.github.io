@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import Appearance from "@/components/Appearance"
 import IcoLink from "@/components/IcoLink"
 import Layout from "@/components/Layout"
@@ -12,65 +11,6 @@ import {
   type ProjectItem,
   type ProjectTag,
 } from "@/data/projects"
-
-const mdxComponents = {
-  a: function MdxLink({
-    href,
-    children,
-  }: {
-    href?: string
-    children?: React.ReactNode
-  }) {
-    if (!href) return <span>{children}</span>
-    if (href.startsWith("/")) {
-      return (
-        <Link href={href} className="v-link">
-          {children}
-        </Link>
-      )
-    }
-    return <IcoLink href={href}>{children}</IcoLink>
-  },
-  img: function MdxImg({
-    src,
-    alt,
-    ...rest
-  }: React.ImgHTMLAttributes<HTMLImageElement>) {
-    const path = typeof src === "string" ? src : ""
-    const phone = /mission-control|habitus\//.test(path)
-    const panel = /sideload|whisperz/.test(path)
-    return (
-      <figure
-        className={["v-shot", phone ? "is-phone" : panel ? "is-panel" : ""]
-          .filter(Boolean)
-          .join(" ")}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={alt || ""} {...rest} />
-      </figure>
-    )
-  },
-  Shot: function Shot({
-    src,
-    alt,
-    width,
-  }: {
-    src: string
-    alt?: string
-    width?: "phone" | "panel"
-  }) {
-    return (
-      <figure
-        className={["v-shot", width === "phone" ? "is-phone" : width === "panel" ? "is-panel" : ""]
-          .filter(Boolean)
-          .join(" ")}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={alt || ""} />
-      </figure>
-    )
-  },
-}
 
 function tagsFromQuery(raw: string | string[] | undefined): ProjectTag[] {
   const value = Array.isArray(raw) ? raw.join(",") : raw
@@ -96,10 +36,10 @@ type CurrentProject = Pick<
 
 export default function ProjectsPage({
   current,
-  source,
+  html,
 }: {
   current: CurrentProject | null
-  source: MDXRemoteSerializeResult | null
+  html: string | null
 }) {
   const router = useRouter()
   const active = tagsFromQuery(router.query.tags)
@@ -213,10 +153,11 @@ export default function ProjectsPage({
                   </IcoLink>
                 </p>
               </header>
-              {source ? (
-                <div className="v-note">
-                  <MDXRemote {...source} components={mdxComponents} />
-                </div>
+              {html ? (
+                <div
+                  className="v-note"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
               ) : (
                 <p className="v-empty">{current.line}</p>
               )}
@@ -251,13 +192,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { slug?: string[] } }) {
-  const { getProjectMdx } = await import("@/lib/projects")
+  const { getProjectHtml } = await import("@/lib/projects")
   const slug = params.slug?.[0]
   const project = slug ? projects.find((item) => item.slug === slug) : undefined
   if (slug && !project) {
     return { notFound: true }
   }
-  const source = project ? await getProjectMdx(project.slug) : null
+  const html = project ? getProjectHtml(project.slug) : null
   return {
     props: {
       current: project
@@ -271,7 +212,7 @@ export async function getStaticProps({ params }: { params: { slug?: string[] } }
             icon: project.icon ?? null,
           }
         : null,
-      source,
+      html,
     },
   }
 }
