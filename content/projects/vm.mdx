@@ -1,0 +1,7 @@
+A course project that got out of hand. I wanted to know why Vim feels like it does, not just how to use it.
+
+<Shot src="/projects/vm/terminal.svg" alt="VM, a small vim-like editor in ncurses" />
+
+VM is a small vim-like editor in C++ with ncurses: buffers, commands, macros. Not one I would switch to.
+
+The interesting bit is how little it is. A macro is just recorded keystrokes played back into the same loop. Repeat counts, `d3w`, `:w` — once those parse, the rest of an editor is decoration. That’s also why it’s hard: one wrong assumption in the loop and everything feels off.

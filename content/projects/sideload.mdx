@@ -1,0 +1,9 @@
+I live in git worktrees. An agent takes a ticket, I get a folder, I want that folder’s debug APK on a phone. I did not want to open Android Studio for that.
+
+<Shot src="/projects/sideload/popover.png" alt="Sideload menu bar, Pixel 9 Pro connected" width="panel" />
+
+Sideload is a Mac menu bar. Add a repo. It lists the main checkout and every worktree `git worktree list` already knows about. Pick one, install. If nothing is plugged in, it starts the default emulator.
+
+<Shot src="/projects/sideload/worktrees.png" alt="Searching local git worktrees to install from" width="panel" />
+
+Worktrees are discovered, not registered — there’s no second list to keep in sync. The fiddly part is the rest of Android: a JDK, the SDK, and a device that might not be there. Merges to `main` cut a GitHub Release; the app can replace itself.

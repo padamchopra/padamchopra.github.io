@@ -1,6 +1,7 @@
 import Link from "next/link"
 import IcoLink from "@/components/IcoLink"
 import Layout from "@/components/Layout"
+import { logoFor } from "@/data/logos"
 import { projects } from "@/data/projects"
 import { work } from "@/data/work"
 
@@ -73,7 +74,12 @@ export default function Home() {
         <ul className="v-projects">
           {projects.map((project) => (
             <li key={project.slug}>
-              <IcoLink href={project.href} icon={project.icon} size="row">
+              <IcoLink
+                href={`/projects/${project.slug}`}
+                icon={logoFor(project.href, project.icon)}
+                size="row"
+                scroll={false}
+              >
                 {project.name}
               </IcoLink>
               <span className="v-role">{project.line}</span>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-label="thomas serve">
+  <rect width="720" height="380" fill="#f4f1ea"/>
+  <rect x="36" y="28" width="648" height="324" rx="14" fill="#1c1b18"/>
+  <circle cx="64" cy="56" r="6" fill="#8d3f30"/>
+  <circle cx="86" cy="56" r="6" fill="#cbb894"/>
+  <circle cx="108" cy="56" r="6" fill="#7a756c"/>
+  <text x="136" y="60" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="13">thomas</text>
+  <text x="64" y="118" fill="#d47864" font-family="ui-monospace, Menlo, monospace" font-size="16">o</text>
+  <text x="88" y="118" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">thomas serve</text>
+  <text x="64" y="162" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="16">listening  http://127.0.0.1:4567</text>
+  <text x="64" y="206" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">AND-1842  sideload-worktrees     working</text>
+  <text x="64" y="234" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">AND-1847  review-plugin          blocked</text>
+  <text x="64" y="262" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">agent     claude · worktree ~/.t3/&/1842</text>
+  <text x="64" y="306" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="16">status moves because the agent moved</text>
+</svg>

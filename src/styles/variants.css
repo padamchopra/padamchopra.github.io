@@ -243,6 +243,35 @@ html.dark .v-paper {
   margin-top: 0.15rem;
 }
 
+.v-notes-index .dek {
+  margin: -0.35rem 0 0.85rem;
+}
+
+.v-notes-index .v-filters {
+  margin: 0 0 1.25rem;
+}
+
+.v-project-index a.v-ico {
+  color: var(--v-mute);
+}
+
+.v-project-index a.v-ico > span {
+  text-decoration: none;
+}
+
+.v-project-index a.v-ico.is-current,
+.v-project-index a.v-ico:hover {
+  color: var(--v-ink);
+}
+
+.v-project-index .v-article-tags {
+  margin-top: 0.2rem;
+}
+
+.v-project-go {
+  margin: 0.45rem 0 0;
+}
+
 .v-note-head {
   margin: 0 0 1rem;
 }
@@ -264,13 +293,17 @@ html.dark .v-paper {
   margin-top: 0;
 }
 
-.v-note a {
-  color: inherit;
-  text-decoration: none;
+.v-note a:not(.v-ico) {
+  color: var(--v-link-ink, inherit);
+  text-decoration-line: underline;
+  text-decoration-color: var(--v-link);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
 }
 
-.v-note a:hover {
-  color: var(--v-mute);
+.v-note a:not(.v-ico):hover {
+  color: var(--v-link-hover, var(--v-ink));
+  text-decoration-color: var(--v-link-hover, var(--v-ink));
 }
 
 .v-note p + p {
@@ -312,6 +345,10 @@ html.dark .v-paper {
   font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
+.v-note a.v-ico {
+  color: var(--v-link-ink);
+}
+
 .v-note pre {
   margin: 1em 0;
   padding: 0.85em 1em;
@@ -330,6 +367,27 @@ html.dark .v-paper {
   max-width: 100%;
   height: auto;
   margin: 1em 0;
+}
+
+.v-shot {
+  margin: 1.15em 0 1.3em;
+}
+
+.v-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 1px solid var(--v-rule);
+  background: var(--v-rail);
+}
+
+.v-shot.is-phone {
+  max-width: 17.5rem;
+}
+
+.v-shot.is-panel {
+  max-width: 22rem;
 }
 
 .v-note table {
@@ -631,6 +689,42 @@ html.dark .v-paper {
 
 .v-paper .v-block > .dek {
   margin: -0.25rem 0 1rem;
+}
+
+.v-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: -0.15rem 0 1.15rem;
+}
+
+.v-filter {
+  border: 0;
+  padding: 0.18em 0.55em;
+  border-radius: 0.4rem;
+  background: color-mix(in srgb, var(--v-ink) 7%, var(--v-rail));
+  color: var(--v-mute);
+  font: inherit;
+  font-size: 0.78em;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.v-filter:hover,
+.v-filter.is-on {
+  color: var(--v-ink);
+}
+
+.v-filter.is-on {
+  background: color-mix(in srgb, var(--v-ink) 14%, var(--v-rail));
+}
+
+.v-article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.15rem 0 0;
 }
 
 .v-paper .v-articles {
