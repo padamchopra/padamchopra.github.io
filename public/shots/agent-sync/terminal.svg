@@ -6,10 +6,10 @@
   <circle cx="108" cy="56" r="6" fill="#7a756c"/>
   <text x="136" y="60" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="13">agent-sync</text>
   <text x="64" y="118" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="16">~/Documents/Padam/agent-sync/</text>
-  <text x="64" y="160" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">skills/linear-cli/  ’  ~/.claude/skills/linear-cli</text>
-  <text x="232" y="192" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">’  ~/.codex/skills/linear-cli</text>
-  <text x="64" y="236" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">skills/sideload/    ’  ~/.claude/skills/sideload</text>
-  <text x="232" y="268" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">’  ~/.codex/skills/sideload</text>
-  <text x="64" y="312" fill="#d47864" font-family="ui-monospace, Menlo, monospace" font-size="16">o</text>
+  <text x="64" y="160" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">skills/linear-cli/  -&gt;  ~/.claude/skills/linear-cli</text>
+  <text x="232" y="192" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">-&gt;  ~/.codex/skills/linear-cli</text>
+  <text x="64" y="236" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">skills/sideload/    -&gt;  ~/.claude/skills/sideload</text>
+  <text x="232" y="268" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">-&gt;  ~/.codex/skills/sideload</text>
+  <text x="64" y="312" fill="#d47864" font-family="ui-monospace, Menlo, monospace" font-size="16">$</text>
   <text x="88" y="312" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">agent-sync sync</text>
 </svg>

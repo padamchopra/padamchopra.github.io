@@ -10,7 +10,7 @@
   <rect x="372" y="148" width="300" height="52" rx="10" fill="#fffcf7" stroke="#e4dfd4"/>
   <text x="522" y="180" fill="#1a1916" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="16" text-anchor="middle">Secondary</text>
   <rect x="48" y="220" width="624" height="52" rx="10" fill="#fffcf7" stroke="#e4dfd4"/>
-  <text x="72" y="252" fill="#7a756c" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="16">Body · change a color, watch every button</text>
+  <text x="72" y="252" fill="#7a756c" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="16">Body Â· change a color, watch every button</text>
   <rect x="48" y="292" width="200" height="44" rx="22" fill="#8d3f30"/>
   <text x="148" y="320" fill="#f4f1ea" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="15" text-anchor="middle">Chip</text>
   <rect x="264" y="292" width="200" height="44" rx="22" fill="#1a1916"/>

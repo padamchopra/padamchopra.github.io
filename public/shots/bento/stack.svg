@@ -7,7 +7,7 @@
   <text x="142" y="128" fill="#7a756c" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="13">SCREEN</text>
   <text x="142" y="156" fill="#1a1916" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="22">Settings</text>
   <rect x="150" y="136" width="452" height="120" rx="10" fill="#1a1916"/>
-  <text x="174" y="176" fill="#cbb894" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="13">MODAL � RESULT</text>
+  <text x="174" y="176" fill="#cbb894" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="13">MODAL · RESULT</text>
   <text x="174" y="208" fill="#f4f1ea" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="22">PickPhoto</text>
-  <text x="174" y="236" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="14">Uri  not a bundle key</text>
+  <text x="174" y="236" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="14">Uri — not a bundle key</text>
 </svg>
