@@ -1,0 +1,13 @@
+I kept uploading a clip to some website just to crop it, and watching the file leave my machine.
+
+<Shot src="/shots/shotformatter/site.png" alt="Shot Formatter: scene and shadow settings in the browser" />
+
+ShotFormatter is the opposite: a page in the browser, ffmpeg-in-WASM energy, nothing uploaded. Pick a file, apply the effect, download the result. The file stays in the tab.
+
+```js
+const file = input.files[0]
+const buffer = await file.arrayBuffer()
+const blob = new Blob([output], { type: "video/mp4" })
+```
+
+The catch is the tab. Big files, Safari, memory — ffmpeg-in-the-browser has edges. That’s the trade for never sending the video anywhere. Live at [shotformatter.com](https://shotformatter.com/).

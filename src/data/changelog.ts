@@ -1,5 +1,12 @@
 export const changelog = [
   {
+    date: "17 Aug 2026",
+    items: [
+      "Updated the project list, and added tags so you can filter it.",
+      "Project writeups in a pane beside the list, like notes.",
+    ],
+  },
+  {
     date: "15 Aug 2026",
     items: [
       "Replaced the card grid with this paper site — left rail, phone menu, light and dark.",

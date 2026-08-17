@@ -1,0 +1,12 @@
+Linear and GitHub boards are for people. I had a desk full of agent checkouts, and no board that knew which worktree belonged to which ticket.
+
+<Shot src="/shots/thomas/terminal.svg" alt="thomas serve, tickets tied to worktrees" />
+
+Thomas is a local-first board. A small Node server, a React UI, SQLite. I look at it in the browser; agents and scripts hit the HTTP API. Tickets, comments, blockers, worktrees, review diffs, live activity.
+
+```sh
+./install.sh
+thomas serve          # http://127.0.0.1:4567
+```
+
+The rule I keep breaking: status should move because the agent moved, not because I dragged a card. The moment it becomes another kanban, it’s just Linear again, on localhost.

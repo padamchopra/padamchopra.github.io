@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-label="agent-sync symlink map">
+  <rect width="720" height="380" fill="#f4f1ea"/>
+  <rect x="36" y="28" width="648" height="324" rx="14" fill="#1c1b18"/>
+  <circle cx="64" cy="56" r="6" fill="#8d3f30"/>
+  <circle cx="86" cy="56" r="6" fill="#cbb894"/>
+  <circle cx="108" cy="56" r="6" fill="#7a756c"/>
+  <text x="136" y="60" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="13">agent-sync</text>
+  <text x="64" y="118" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="16">~/Documents/Padam/agent-sync/</text>
+  <text x="64" y="160" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">skills/linear-cli/  -&gt;  ~/.claude/skills/linear-cli</text>
+  <text x="232" y="192" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">-&gt;  ~/.codex/skills/linear-cli</text>
+  <text x="64" y="236" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">skills/sideload/    -&gt;  ~/.claude/skills/sideload</text>
+  <text x="232" y="268" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">-&gt;  ~/.codex/skills/sideload</text>
+  <text x="64" y="312" fill="#d47864" font-family="ui-monospace, Menlo, monospace" font-size="16">$</text>
+  <text x="88" y="312" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">agent-sync sync</text>
+</svg>

@@ -29,8 +29,10 @@
     "eslint-config-next": "^15.5.18",
     "marked": "^18.0.9",
     "next": "^15.5.18",
+    "next-mdx-remote": "^5.0.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "remark-gfm": "^4.0.1",
     "typescript": "^5.9.3"
   },
   "devDependencies": {

@@ -1,0 +1,14 @@
+Linear’s website is fine. I still wanted something I could type — and something an agent could type — without opening a browser.
+
+<Shot src="/shots/linear-cli/terminal.svg" alt="linear workspace add, linear my" />
+
+linear-cli is a small Python client for Linear’s GraphQL API. Stdlib only, no dependency garden. Workspaces are aliases; Linear API keys are per-workspace, so one key is one org.
+
+```bash
+linear workspace add personal
+linear workspace add work --default
+linear issues -w work --team ENG
+linear my
+```
+
+Credentials never live in the repo. Config is `~/.config/linear-cli/config.json` with `0600`, or you store only the *name* of an environment variable. Install drops a `linear` symlink and matching agent skills for Claude and Codex. That was the real itch: I was tired of pasting issue URLs into a chat.

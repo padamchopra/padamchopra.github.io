@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-label="github CLI attaching media to a pull request">
+  <rect width="720" height="380" fill="#f4f1ea"/>
+  <rect x="36" y="28" width="648" height="324" rx="14" fill="#1c1b18"/>
+  <circle cx="64" cy="56" r="6" fill="#8d3f30"/>
+  <circle cx="86" cy="56" r="6" fill="#cbb894"/>
+  <circle cx="108" cy="56" r="6" fill="#7a756c"/>
+  <text x="136" y="60" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="13">github</text>
+  <text x="64" y="118" fill="#d47864" font-family="ui-monospace, Menlo, monospace" font-size="16">$</text>
+  <text x="88" y="118" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">github login</text>
+  <text x="64" y="154" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="16">signed in · profile saved</text>
+  <text x="64" y="206" fill="#d47864" font-family="ui-monospace, Menlo, monospace" font-size="16">$</text>
+  <text x="88" y="206" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">github owner/repo#42 ./walkthrough.mp4</text>
+  <text x="64" y="250" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="16">open  pull/42</text>
+  <text x="64" y="278" fill="#a39b8e" font-family="ui-monospace, Menlo, monospace" font-size="16">upload  walkthrough.mp4</text>
+  <text x="64" y="306" fill="#ece7dc" font-family="ui-monospace, Menlo, monospace" font-size="16">appended to description · nothing committed</text>
+</svg>

@@ -1,0 +1,12 @@
+GitHub has no API for the nice attachment URLs in a PR description. Those `user-images.githubusercontent.com` links are minted by the website’s uploader. Drag it in by hand, or pretend to be a person.
+
+<Shot src="/shots/github-pr-media/terminal.svg" alt="github login, then attach a walkthrough to a PR" />
+
+This pretends. A CLI named `github` drives a real Chromium with Playwright, on a persistent profile so I sign in once. It opens the PR, clicks Edit, attaches the files, waits, saves. Nothing is committed.
+
+```bash
+github login
+github owner/repo#42 ./before.png ./walkthrough.mp4
+```
+
+It appends; it does not replace the body. The installer puts the command on `PATH` and, if it finds Claude Code or Codex, drops a skill so I can say “put this video on the PR” and walk away — which only works because the browser session is already logged in.

@@ -1,0 +1,13 @@
+Compose navigation is a pile of string keys until someone makes it a type. I wanted the type.
+
+<Shot src="/shots/bento/stack.svg" alt="Typed screens stacked, a modal that returns a Uri" />
+
+Bento is a navigation framework on Navigation3 — Mavericks for state, Koin for injection, KSP so the routes are generated. Screens, results, modals, shared elements, nested child screens, screen tracking. A library, published to GitHub Packages, not an app.
+
+```kotlin
+maven {
+  url = uri("https://maven.pkg.github.com/padamchopra/Bento")
+}
+```
+
+The bet is that a screen is a type, a result is a type, and “navigate to settings and bring me back a URI” should not be a bundle key you invent twice. Navigation3 was still alpha when I wired this. Results and modals have to be first-class or people fall back to bundles, and then the types were theatre.

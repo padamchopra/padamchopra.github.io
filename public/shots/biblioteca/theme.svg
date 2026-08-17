@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-label="Biblioteca live theme library">
+  <rect width="720" height="380" fill="#f4f1ea"/>
+  <text x="48" y="52" fill="#1a1916" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="22">Theme</text>
+  <rect x="48" y="76" width="44" height="44" rx="8" fill="#8d3f30"/>
+  <rect x="104" y="76" width="44" height="44" rx="8" fill="#1a1916"/>
+  <rect x="160" y="76" width="44" height="44" rx="8" fill="#d47864"/>
+  <rect x="216" y="76" width="44" height="44" rx="8" fill="#cbb894"/>
+  <rect x="48" y="148" width="300" height="52" rx="10" fill="#1a1916"/>
+  <text x="198" y="180" fill="#f4f1ea" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="16" text-anchor="middle">Primary</text>
+  <rect x="372" y="148" width="300" height="52" rx="10" fill="#fffcf7" stroke="#e4dfd4"/>
+  <text x="522" y="180" fill="#1a1916" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="16" text-anchor="middle">Secondary</text>
+  <rect x="48" y="220" width="624" height="52" rx="10" fill="#fffcf7" stroke="#e4dfd4"/>
+  <text x="72" y="252" fill="#7a756c" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="16">Body · change a color, watch every button</text>
+  <rect x="48" y="292" width="200" height="44" rx="22" fill="#8d3f30"/>
+  <text x="148" y="320" fill="#f4f1ea" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="15" text-anchor="middle">Chip</text>
+  <rect x="264" y="292" width="200" height="44" rx="22" fill="#1a1916"/>
+  <text x="364" y="320" fill="#f4f1ea" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="15" text-anchor="middle">Chip</text>
+  <rect x="480" y="292" width="192" height="44" rx="22" fill="#fffcf7" stroke="#e4dfd4"/>
+  <text x="576" y="320" fill="#1a1916" font-family="ui-sans-serif, Helvetica, sans-serif" font-size="15" text-anchor="middle">Chip</text>
+</svg>

@@ -24,10 +24,14 @@ export default function NotesSplit({
   hasReader,
   list,
   reader,
+  storageKey = STORAGE,
+  resizeLabel = "Resize notes",
 }: {
   hasReader: boolean
   list: ReactNode
   reader: ReactNode
+  storageKey?: string
+  resizeLabel?: string
 }) {
   const wrapRef = useRef<HTMLDivElement>(null)
   const drag = useRef<{ x: number; width: number } | null>(null)
@@ -42,7 +46,7 @@ export default function NotesSplit({
 
   function saveWidth() {
     try {
-      window.localStorage.setItem(STORAGE, String(Math.round(widthRef.current)))
+      window.localStorage.setItem(storageKey, String(Math.round(widthRef.current)))
     } catch {
       // ignore blocked storage
     }
@@ -50,12 +54,12 @@ export default function NotesSplit({
 
   useEffect(() => {
     try {
-      const saved = Number(window.localStorage.getItem(STORAGE))
+      const saved = Number(window.localStorage.getItem(storageKey))
       if (Number.isFinite(saved) && saved > 0) setListWidth(saved)
     } catch {
       // ignore blocked storage
     }
-  }, [])
+  }, [storageKey])
 
   useEffect(() => {
     const apply = () => {
@@ -132,7 +136,7 @@ export default function NotesSplit({
       <button
         type="button"
         className="v-notes-split"
-        aria-label="Resize notes"
+        aria-label={resizeLabel}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
